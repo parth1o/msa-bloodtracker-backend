@@ -5,8 +5,7 @@ name: Build & Deploy GraphQL Backend
 on:
   push:
     branches:
-      - main
-  workflow_dispatch:
+      - master
 
 jobs:
   build:
