@@ -12,6 +12,14 @@ namespace msa_bloodtracker.GraphQL.Bloodtests
     [ExtendObjectType(name: "Query")]
     public class BloodtestQueries
     {
+        
+        [UseAppDbContext]
+        [UsePaging]
+        [Authorize]
+        public IQueryable<Bloodtest> GetBloodtests([ScopedService] AppDbContext context)
+        {
+            return context.Bloodtests;
+        }
 
         [UseAppDbContext]
         [UsePaging]
