@@ -18,7 +18,7 @@ namespace msa_bloodtracker.GraphQL.Bloodtests
     public class BloodtestMutations
     {
         [UseAppDbContext]
-        [Authorize]
+        
         public async Task<Bloodtest> AddBloodtestAsync(AddBloodtestInput input, ClaimsPrincipal claimsPrincipal,
             [ScopedService] AppDbContext context, CancellationToken cancellationToken)
         {
